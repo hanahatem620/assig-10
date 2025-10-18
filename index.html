@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/sylesheet.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="head-content">
+            <div class="container">
+                <h1 class=" position-relative mt-4 d-flex justify-content-center">Bookmarker</h1>
+
+                <div class="book-body d-flex flex-column mt-4 gap-2">
+
+                    <h2 class="text-center py-3">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+
+
+                    <div class="site-name mb-3 ">
+                        <label for="bookMarkName" class="pb-3 fw-bold">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                            Site Name
+                        </label>
+                        <input type="text" class="form-control" id="bookMarkName" placeholder="Bookmark Name">
+                    </div>
+
+                     <div class="site-url mb-3 ">
+                        <label for="bookMarkUrl" class="pb-3 fw-bold">
+                           <i class="fa-solid fa-link"></i>
+                            Site Url
+                        </label>
+                        <input type="text" class="form-control" id="bookMarkUrl" placeholder="Website URL">
+                    </div>
+
+                      <div class="book-im mb-3 ">
+                        <label for="bookImg" class="pb-3 fw-bold">
+                           <i class="fa-solid fa-book"></i>
+                            Book
+                        </label>
+                        <input type="file" accept="image/*" class="form-control" id="bookImg" >
+                        
+                    </div>
+
+                    <div class="buttons ms-auto mb-2">
+                    <button class="btn btn-primary mb-2 d-block " id="submitBtn" onclick="addBooks()">Submit</button>
+                    <button class="btn btn-warning d-block d-none" id="updateBtn" onclick="updateBook()" >update</button>
+                    </div>
+                    
+                    <div class="books-search mb-3 ">
+                        <label for="bookSearch" class="fw-bold">
+                            <i class="fa-solid fa-magnifying-glass-plus mb-2"></i></label>
+                        <input type="search" class="form-control" oninput="bookSearch(this.value)" id="bookSearch" placeholder="Search book name">
+                    </div>
+
+                </div>
+
+<table class="table mt-4">
+  <thead >
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Website Name</th>
+      <th scope="col">Book image</th>
+      <th scope="col">Visit</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+
+  <tbody id="booksTable">
+    
+
+
+
+  </tbody>
+
+</table>
+
+
+
+
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

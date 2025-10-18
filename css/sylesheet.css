@@ -1,0 +1,33 @@
+body{
+    background-color:#F2EAD3;
+}
+
+@font-face {
+    font-family:"pac" ;
+    src: url(../Pacifico/Pacifico-Regular.ttf);
+}
+
+h1{font-family: "pac";
+color: #344F1F;}
+
+h1::after{
+    content: "";
+    position: absolute;
+    width: 15rem;
+    height: .9375rem;
+    background-color: rgb(133, 214, 169);
+    bottom: 0;
+    z-index: -1;
+transition: height 0.5s;}
+
+h1:hover::after{height: 1.5625rem ;}
+
+
+.book-body h2{background-image:  linear-gradient(to right, #3ca55c, #beb337);
+    -webkit-text-fill-color: transparent;
+    background-clip:inherit;
+    -webkit-background-clip: text;}
+
+.book-body {border-width: 2px 0 2px 0;
+border-style: dotted;
+border-color: black;}
