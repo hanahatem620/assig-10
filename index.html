@@ -31,64 +31,79 @@
                             <i class="fa-solid fa-book-bookmark"></i>
                             Site Name
                         </label>
-                        <input type="text" class="form-control" id="bookMarkName" placeholder="Bookmark Name">
+                        <input oninput="validatebookInput(this)" type="text" class="form-control" id="bookMarkName"
+                            placeholder="Bookmark Name">
+
+                        <div class="alert alert-danger d-none" role="alert">
+                            you should write at least 5 letters in lowercase
+                        </div>
                     </div>
 
-                     <div class="site-url mb-3 ">
+                    <div class="site-url mb-3 ">
                         <label for="bookMarkUrl" class="pb-3 fw-bold">
-                           <i class="fa-solid fa-link"></i>
+                            <i class="fa-solid fa-link"></i>
                             Site Url
                         </label>
-                        <input type="text" class="form-control" id="bookMarkUrl" placeholder="Website URL">
+                        <input oninput="validatebookInput(this)" type="text" class="form-control" id="bookMarkUrl"
+                            placeholder="Website URL">
+
+                        <div class="alert alert-danger d-none" role="alert">
+                            your url should be start with "http/ or https/"
+                        </div>
                     </div>
 
-                      <div class="book-im mb-3 ">
-                        <label for="bookImg" class="pb-3 fw-bold">
-                           <i class="fa-solid fa-book"></i>
-                            Book
+                    <div class="book-desc mb-3 ">
+                        <label for="bookDescription" class="pb-3 fw-bold">
+                            <i class="fa-solid fa-book-open"></i>
+                            book description
                         </label>
-                        <input type="file" accept="image/*" class="form-control" id="bookImg" >
-                        
+                        <input oninput="validatebookInput(this)" type="text" class="form-control" id="bookDescription"
+                            placeholder="Book description">
+                    </div>
+                    <div class="book-image mb-3 ">
+                        <label for="bookImg" class="pb-3 fw-bold">
+                            <i class="fa-solid fa-book"></i>
+                            Book image
+                        </label>
+                        <input type="file" accept="image/*" class="form-control" id="bookImg"
+                            onchange="validatebookInput(this)">
+
                     </div>
 
                     <div class="buttons ms-auto mb-2">
-                    <button class="btn btn-primary mb-2 d-block " id="submitBtn" onclick="addBooks()">Submit</button>
-                    <button class="btn btn-warning d-block d-none" id="updateBtn" onclick="updateBook()" >update</button>
+                        <button class="btn btn-primary mb-2 d-block " id="submitBtn" onclick="addBooks()" disabled>
+                            add</button>
+                        <button class="btn btn-warning d-block d-none" id="updateBtn"
+                            onclick="updateBook()">update</button>
                     </div>
-                    
+
                     <div class="books-search mb-3 ">
                         <label for="bookSearch" class="fw-bold">
                             <i class="fa-solid fa-magnifying-glass-plus mb-2"></i></label>
-                        <input type="search" class="form-control" oninput="bookSearch(this.value)" id="bookSearch" placeholder="Search book name">
+                        <input type="search" class="form-control" oninput="bookSearch(this.value)" id="bookSearch"
+                            placeholder="Search book name">
                     </div>
 
                 </div>
 
-<table class="table mt-4">
-  <thead >
-    <tr>
-      <th scope="col">Index</th>
-      <th scope="col">Website Name</th>
-      <th scope="col">Book image</th>
-      <th scope="col">Visit</th>
-      <th scope="col">Delete</th>
-      <th scope="col">Update</th>
-    </tr>
-  </thead>
+                <table class="table mt-4">
+                    <thead>
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Book image</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
 
-  <tbody id="booksTable">
-    
-
+                    <tbody id="booksTable">
 
 
-  </tbody>
+                    </tbody>
 
-</table>
-
-
-
-
-
+                </table>
             </div>
         </div>
     </main>
